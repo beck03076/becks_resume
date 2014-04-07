@@ -1,0 +1,17 @@
+%h1 Listing frameworks
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @frameworks.each do |framework|
+    %tr
+      %td= link_to 'Show', framework
+      %td= link_to 'Edit', edit_framework_path(framework)
+      %td= link_to 'Destroy', framework, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Framework', new_framework_path

@@ -1,0 +1,205 @@
+%header
+  .container
+    .col-md-9
+      %h1 
+        = @user.first_name.titleize
+        = @user.middle_name.titleize
+        = @user.last_name.titleize
+      %p
+        = @user.summary
+    .col-md-3
+      <br/>
+      <br/>
+      %span{id: "tour",class: 'themer-b pointer'}
+        %span{class: "glyphicon glyphicon-play mar0"}
+        Take a Tour
+      .comment
+        some really important things about me
+      - if current_user
+        Signed in as 
+        %strong
+        = current_user.first_name
+        = link_to "Sign out", signout_path, id: "sign_out" 
+        %small 
+          %small
+          = current_user.email
+      - else
+        
+        = link_to "/auth/google_oauth2", id: "sign_in" ,class: "themer-b text-right"  do
+          %span{class: "glyphicon glyphicon-file mar0"}
+          Create Yours for Free
+        .comment
+          should sign in with google
+        %span{class: "fixed play glyphicon glyphicon-off pointer",id: "stopper", style: "display:none;"}
+       
+        
+
+<br/>
+<br/>
+<br/>
+.container.main
+  %h2.themer
+    %strong
+      Technologies
+      %small Stuff I like to make things with
+  %hr
+
+  .row
+    - @languages.each do |language|
+      .col-xs-6
+        %span.tag.xlarge
+          = bip_name_link language
+          - if current_user
+            %small.text-center.pilled-l
+              = bip_activators language
+
+  .row
+    - @frameworks.each do |framework|
+      - if framework.name.downcase == "ruby on rails"
+        %span.tour.r-o-r-h.hide 
+          %span{class: "title"}Ruby On Rails
+          %span{class: "content"}Spent almost <b>3 years</b> on rails, so it is safe to say that my <b>first field of expertise</b> is ruby on rails. Created <b>2 products and 2 gems</b> using rails/ruby.
+      .col-xs-3
+        %span.tag.large
+          = bip_name_link framework
+          
+          - if current_user
+            %small.pilled-l
+              = bip_activators framework
+      
+
+  .row
+    - @grouped_skills.keys.in_groups_of(4).each_with_index do |grp,j|
+      - sp = 3
+      - grp.each do |skill_topic_id|
+        .dummy{class: "col-xs-#{sp}"}
+          %span.tag.medium
+            = SkillTopic.find(skill_topic_id).name
+            %small
+              - @grouped_skills[skill_topic_id].each do |skill|
+                = bip_name_link skill
+                - if skill.name.downcase == "pl-sql"
+                  %span.tour.p-s-h.hide 
+                    %span{class: "title"}Pl Sql
+                    %span{class: "content"}I started my career as a pl sql developer. I have worked on <b>Triggers, Functions, Views</b> and pretty much the entire suite of Oracle and Mysql databases.
+                - if current_user
+                  %div{class: "hide activators-#{skill.id} pilled" }
+                    = bip_activators skill,1
+  %h2.themer
+    %strong
+      Experience
+      %small Places I've worked at
+    
+  %hr
+  
+  - @experiences.each do |e|
+    - tour_exp = (e.company_link.split(".")[1])  
+    - if tour_exp == "organizor"
+      %span.tour.organizor-h.hide 
+        %span{class: "title"}Organizor
+        %span{class: "content"}Built this powerful CRM from scratch. It's features are simply mind blowing. Starting from students enquiry upto agencies revenue, this <b>agency management system</b> will always be your best friend.
+    - elsif tour_exp == "crawlfish"
+      %span.tour.crawlfish-h.hide 
+        %span{class: "title"}Crawlfish
+        %span{class: "content"}Built this standard <b>price comparison engine</b> using rails and wrote <b>web crawlers/scrapers</b> that fetches price info, parses the DOM and updates the DB.
+    %h3
+      %strong
+        = best_in_place e, :role, activator: ".activators-role-#{e.id}"
+      - if current_user
+        %span{class: "activators-role-#{e.id} pilled"}edit
+    
+    %h4.pull-right
+      %strong
+        = best_in_place_if(current_user, e, :to,display_as: :to_txt,type: :date)
+    %h4.pull-right
+      %strong
+        &nbsp;-&nbsp;
+    %h4.pull-right
+      %strong
+        = best_in_place_if(current_user,e, :from,display_as: :from_txt,type: :date)
+    %h4
+      = best_in_place e, :company, activator: ".activators-comp-name-#{e.id}"
+      %small
+        %a{href: "#{e.company_link}"} 
+          = best_in_place  e,:company_link,activator: ".activators-comp-link-#{e.id}",display_as: :comp_link,classes: tour_exp
+      - if current_user
+        %span.pilled
+          edit - 
+          %a{href: "#",class: "activators-comp-name-#{e.id}"}name
+          |
+          %a{href: "#",class: "activators-comp-link-#{e.id}"}link
+      %br
+      %h5
+        %strong
+          Description 
+        - if current_user
+          %span= best_in_place(e, :desc,type: "textarea",display_as: :edit,html_attrs: {style: "width: 900px;"})        
+        %p= see_more(e, :desc, content_size: 130,db: true)
+      %h5
+        %strong
+          Responsibilities
+        - if current_user
+          %span= best_in_place(e, :duty,type: "textarea",display_as: :edit)
+        %p= see_more(e, :duty, content_size: 130,db: true)
+      %hr
+  %h2.themer
+    %strong
+      Highlights
+      %small Some good work by me
+      %hr
+  
+  - @highlights.each do |h|
+    %h4
+      %strong
+        = best_in_place h, :name, activator: ".activators-hgh-name-#{h.id}",classes: "#{h.name.downcase.tr(' ','-')}"
+        - if h.name.downcase == "see more"
+          %span.tour.see-more-h.hide
+            %span{class: "title"}See More
+            %span{class: "content"}Created this simple gem in order to showcase the <b>best practices that I follow</b> and how I <b>write tests for every feature</b>. In fact, Im using this gem in the same website(check the link see more) 
+      %small
+        %small
+          %a{href: "#{h.link}"} 
+            = best_in_place h, :link, activator: ".activators-hgh-link-#{h.id}",display_as: :comp_link
+      - if current_user      
+        %span.pilled
+          edit - 
+          %a{href: "#",class: "activators-hgh-name-#{h.id}"}name
+          |
+          %a{href: "#",class: "activators-hgh-link-#{h.id}"}link
+    %h5
+      - if current_user
+        %span{class: "activators-hgh-desc-#{h.id} pilled"}edit
+      = best_in_place(h, :desc, activator: ".activators-hgh-desc-#{h.id}",type: :textarea )
+
+  %hr
+
+  %h2.themer
+    %strong
+      Links
+      %small Where to find me
+
+  %hr
+
+  .row
+    - %w(so fb github twitter).each do |l|
+      - if(l == "so")
+        %span.tour.s-o-h.hide
+          %span{class: "title"}StackOverFlow
+          %span{class: "content"}Contributed to the rails/mysql community by proactively answering rails/mysql tagged questions. Been a active member of stackoverflow for a long time.
+      .col-xs-3
+        %span.tag.medium
+          - t = figure_out(l)
+          = t.titleize
+          %small
+            = bip_name_link @user,(l + '_text').to_sym,(l + '_link').to_sym
+            - if current_user
+              %small.text-center.pilled-l
+                = bip_activators @user,nil,(l + '_text').to_sym,(l + '_link').to_sym
+
+  .row.contact
+    .col-xs-12
+      %span.tag.medium
+        %h4.themer
+          contact : 
+          %strong
+            senthilkumar.hce@gmail.com

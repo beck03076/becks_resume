@@ -1,0 +1,101 @@
+--- 
+:languages: 
+- :name: Ruby
+  :link: http://ruby-lang.org
+- :name: Javascript
+  :link: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+:frameworks: 
+- :name: Ruby on Rails
+  :link: http://rubyonrails.org
+- :name: jquery
+  :link: http://jquery.com/
+- :name: coffeescript
+  :link: http://coffeescript.org/
+- :name: twitter-bootstrap
+  :link: http://getbootstrap.com/2.3.2/
+:skills: 
+- :skill_topic: Scripting Languages
+  :skill: 
+  - :name: Shell Scripting
+    :link: http://en.wikipedia.org/wiki/Shell_script
+  - :name: Sed
+    :link: http://en.wikipedia.org/wiki/Sed
+  - :name: Awk
+    :link: http://en.wikipedia.org/wiki/Awk
+  - :name: Imagemagick
+    :link: http://www.imagemagick.org/
+- :skill_topic: Databases
+  :skill: 
+  - :name: mysql
+    :link: http://www.mysql.com/
+  - :name: oracle
+    :link: http://www.oracle.com/index.html
+  - :name: sql
+    :link: http://en.wikipedia.org/wiki/SQL
+  - :name: pl-sql
+    :link: http://en.wikipedia.org/wiki/PL/SQL
+- :skill_topic: Testing Tools
+  :skill: 
+  - :name: rspec
+    :link: http://rspec.info/
+  - :name: jasmine
+    :link: http://jasmine.github.io/
+  - :name: capybara
+    :link: https://github.com/jnicklas/capybara
+  - :name: factory-girl
+    :link: https://github.com/thoughtbot/factory_girl
+  - :name: selenium
+    :link: http://docs.seleniumhq.org/
+- :skill_topic: Gems & Plugins
+  :skill: 
+  - :name: nokogiri
+    :link: http://nokogiri.org/
+  - :name: mechanize
+    :link: http://mechanize.rubyforge.org/
+  - :name: sphinx-search
+    :link: http://sphinxsearch.com/
+  - :name: devise
+    :link: https://github.com/plataformatec/devise
+  - :name: jquery-datatables
+    :link: https://datatables.net/
+- :skill_topic: Essential Tools
+  :skill: 
+  - :name: github
+    :link: https://github.com/
+  - :name: Vim
+    :link: http://www.vim.org/
+  - :name: eclipse
+    :link: https://www.eclipse.org/
+  - :name: toad
+    :link: http://www.quest.com/toad/
+- :skill_topic: Methodologies
+  :skill: 
+  - :name: Scrum
+    :link: https://www.scrum.org/
+  - :name: TDD
+    :link: http://en.wikipedia.org/wiki/Test-driven_development
+  - :name: SDLC
+    :link: http://en.wikipedia.org/wiki/Software_development_process
+  - :name: Web Crawlers
+    :link: http://en.wikipedia.org/wiki/Web_crawler
+- :skill_topic: Platforms
+  :skill: 
+  - :name: Windows
+    :link: http://windows.microsoft.com/en-us/windows/home
+  - :name: Ubuntu 
+    :link: http://www.ubuntu.com/
+  - :name: ArchLinux
+    :link: https://www.archlinux.org/
+- :skill_topic: Domains
+  :skill: 
+  - :name: CRM
+    :link: http://en.wikipedia.org/wiki/Customer_relationship_management
+  - :name: E-commerce
+    :link: http://en.wikipedia.org/wiki/E-commerce
+  - :name: Retail
+    :link: http://en.wikipedia.org/wiki/Retail
+
+
+
+
+

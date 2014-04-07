@@ -1,0 +1,11 @@
+---
+- :name: See More
+  :desc: I created this simple rubygem to view large texts both fetched locally and from db. This app uses see_more in description sections
+  :link: https://github.com/beck03076/see_more
+- :name: Notifiably Audited
+  :desc: I created this rubygem, building on top of the audited gem based on the idea that nofitications on a model is a sub set of auditing the said model
+  :link: https://github.com/beck03076/notifiably_audited
+- :name: Becks Resume
+  :desc: I created this very website to have a link for myself but then I thought, how do I make this help everyone? and made this fully in place editable. 
+  :link: www.becksresume.com
+

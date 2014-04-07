@@ -1,0 +1,26 @@
+---
+- :company: TransInfinity Technologies Private Limited
+  :role: Senior Software Developer
+  :from: 2013-09-01
+  :to: 2014-04-01
+  :link: http://www.organizor.org
+  :desc: This is a full scale CRM with features ranging from Enquiries, Registrations, Institutions, People, Finance, Contracts, Emails, Todos, Follow Ups, Roles, Permissions, Notes, Documents, Calendar, Dashboard, Reports with Sophisticated Search and Filtering|It also has a secured portal/access to various roles from Students and Universities to Agencies and Business Partners|It is extremely customizable by the agency administrator with respect to adding Resources(considering and encouraging the change in future) to the system any time|User based Settings are also implemented which is unique to every user|This also ships with a full scale audit of all activities by every user with a real time notification system
+  :duty: Acquire the User Stories, Create PBIs, Plan the sprint duration and release. Architect the entire products database and develop the entire application(end-to-end from scratch) with Ruby on Rails, Jquery and Mysql|Code the application use various RubyGems(Devise, CarrierWave, CanCan, Ransack, etc.) to develop reusable features|Be in constant touch with the business users across departments such as Counselors, Contract Managers, Finance Managers in order to validate the proposed solution|Write integration tests for the Application with Rspec and test the Features|Collaborate with business users and User Experience experts regarding product definition, schedule, scope and optimization related decisions|Develop best practices and architecture
+  
+- :company: TransInfinity Technologies Private Limited
+  :role: Software Developer
+  :from: 2011-10-01
+  :to: 2013-08-01
+  :link: http://www.crawlfish.in
+  :desc: This is a price comparison service which enables the customer to find, explore, compare prices of products and discover best deals from retailers in cities across India and online shopping portals and assists customer in making a well-informed purchase decision|It is also a location based price search engine, where people can find price of a product from a physical store in their locality|In the backend, CrawlFish leverages the power of ruby, mechanize, nokogiri, watir and selenium to crawl & scrap various e commerce websites and parses through the DOM to fetch product, price and offers information and updates the database|Sophisticated CrawlBots are scheduled to automatically crawl every one hour and update the price of best selling products and discover new products that has been launched in the market|An Unique method to solve the most common name mapping problem faced by almost all price aggregation services has been solved as a part of CrawlFish’s achievement and it brought 90% accuracy in mapping products with only names in hand|The price updater is intelligent enough to email a log file for every crawl and helps the team decide on actions to be taken for broken links, failed scrap and used bandwidth|Price-Update-on-Visit was also implemented by exploiting Javascript where the Price for all the ecommerce sellers will be updated real time during when the User visits a specific product’s page
+  :duty: Architected the complete products database and developed the entire application with Ruby on Rails, Jquery and Mysql|Conduct survey and research and come up with new features/ideas and incorporate them into the product|As a Sales and Marketing Head, subscribe more than 150 retailers with the service and help the company achieve a 6 figure revenue|Write all the price updater/crawler/scrapper ruby scripts to programmatically visit ecommerce websites and fetch product data|Write shell and imagemagick scripts to optimize/crop and create versions of different sizes of all the products images to be shown on the website|Integrate sms module to generate coupon code and send transactional smses to the customers/end users for retail/physical store purchases
+  
+- :company: Infosys Technologies Limited
+  :role: Systems Engineer
+  :from: 2009-12-01
+  :to: 2011-10-01
+  :link: http://www.infosys.com
+  :desc: Zurich Kantonal Bank [ZKB] is the largest cantonal bank and fourth largest bank in Switzerland. Objective of this project is to port the banking application from AIX4.3.3 to RHEL5.2 and to migrate its database from Oracle 8i to Oracle 10g|Along with data migration, new tables, procedures, functions, triggers and views were created in order to implement new requirements in the project
+  :duty: Involve in all the Software Development Life Cycle [SDLC] phases and exhibit complete ownership for three complex modules in the project|Participate in the requirements phase and create the HDD/LDD documents|Develop PL/SQL scripts and backend programming to create the all database objects(tables, procedures, functions, triggers and views)|Test and Deliever the Pl/Sql code|Administrator the central database Oracle 10g right from managing the database objects to liaising with the application users [bank tellers]|Migrate the data from Oracle 8i to Oracle 10g
+
+

@@ -1,0 +1,13 @@
+!!! 5
+%html
+  %head
+  
+    %title 
+      = @user.name
+    %link{ rel: "shortcut icon", href: "/logo.ico" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => stylesheet_path('application') }
+    %script{ :src => javascript_path('application'), :type => "text/javascript" }
+  %body
+    = yield
+
+    

@@ -1,0 +1,41 @@
+<script>
+$(function(){
+    tTip = '.geekSquadToolTip';
+    $('div.openbox-geeksquad-puck').hover(function(){onHvr(tTip,this)},
+                                          function(){offHvr(tTip,this)});
+});
+
+
+function onHvr(cl,obj){
+  var tTipHtml = $(cl + 'Wrapper').html();
+  $(obj).after(tTipHtml);
+  $(obj).siblings(cl).css('display', 'block');
+}
+
+function offHvr(cl,obj){
+  $(obj).siblings(cl).remove();
+}
+
+</script>
+<!-- html -->
+<% 6.times { %>
+<h2>Product Title Here</h2>
+<div class='openbox-geeksquad-puck'>
+</div>
+
+<% } %>
+<span class="geekSquadToolTipWrapper">
+    <span class="geekSquadToolTip">
+        <div class="geekSquadTipCertified">Geek Squad Certified</div>
+        <div class="geekSquadTipTxt">
+          What's That? Geek Squad Certified Open-Box products have a thorough inspection performed by Geek Squad Agents. Through the certification process, Geek Squad Agents perform detailed tests to ensure that the product works to manufacturer's specifications and includes all necessary accessories and parts*. Then the product is professionally cleaned and repackaged with care.
+        With Geek Squad Certified Open-Box, you can rest assured that one of our highly trained agents has completed a thorough review of the item.
+        *may include non-manufacturers parts or accessories
+        Learn more about Geek Squad Certified Open-Box items
+        </div>
+    </span>
+</span>
+
+
+
+

@@ -1,0 +1,14 @@
+resources = %w(language framework skill experience highlight)
+
+# delete all
+resources.each do |i|
+  i.camelize.constantize.all.delete_all
+end
+
+# run rake db:seed to created all
+
+# link to first user
+
+resources.each do |i|
+  User.first.send(i.pluralize) << i.camelize.constantize.all
+end

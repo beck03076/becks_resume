@@ -1,0 +1,27 @@
+%h1 Listing highlights
+
+%table
+  %tr
+    %th Name
+    %th Link
+    %th Desc
+    %th Created by
+    %th User
+    %th
+    %th
+    %th
+
+  - @highlights.each do |highlight|
+    %tr
+      %td= highlight.name
+      %td= highlight.link
+      %td= highlight.desc
+      %td= highlight.created_by
+      %td= highlight.user_id
+      %td= link_to 'Show', highlight
+      %td= link_to 'Edit', edit_highlight_path(highlight)
+      %td= link_to 'Destroy', highlight, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Highlight', new_highlight_path

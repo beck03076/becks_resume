@@ -1,0 +1,47 @@
+%h1 Listing users
+
+%table
+  %tr
+    %th First name
+    %th Middle name
+    %th Last name
+    %th Summary
+    %th Email
+    %th Mobile
+    %th Address
+    %th Github text
+    %th Github link
+    %th Twitter text
+    %th Twitter link
+    %th Fb link
+    %th Fb text
+    %th So text
+    %th So link
+    %th
+    %th
+    %th
+
+  - @users.each do |user|
+    %tr
+      %td= user.first_name
+      %td= user.middle_name
+      %td= user.last_name
+      %td= user.summary
+      %td= user.email
+      %td= user.mobile
+      %td= user.address
+      %td= user.github_text
+      %td= user.github_link
+      %td= user.twitter_text
+      %td= user.twitter_link
+      %td= user.fb_link
+      %td= user.fb_text
+      %td= user.so_text
+      %td= user.so_link
+      %td= link_to 'Show', user
+      %td= link_to 'Edit', edit_user_path(user)
+      %td= link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New User', new_user_path
