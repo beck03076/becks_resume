@@ -35,5 +35,5 @@ production:
   database: becks_resume_production
   pool: 5
   username: root
-  password:
+  password: Sector@123
   socket: /var/run/mysqld/mysqld.sock
