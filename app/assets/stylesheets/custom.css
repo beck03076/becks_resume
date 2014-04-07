@@ -57,7 +57,9 @@ body {
 .seperator {
   border-bottom: 1px solid #DDDDDD; }
 
-
+h1 {
+  font-weight: 700;
+  margin: 1.3rem 0; }
 
 /* Set the fixed height of the footer here */
 #footer {
