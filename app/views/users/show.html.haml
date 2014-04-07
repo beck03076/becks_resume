@@ -21,7 +21,7 @@
         %h4 
           Hello!
           %strong
-            = current_user.provider_name
+            = current_user.provider_name.split(" ")[0]
           %small.text-right 
             %small
             = current_user.email
