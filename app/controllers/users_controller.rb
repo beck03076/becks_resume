@@ -5,12 +5,18 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    redirect_to '/users/1'
+    @user = User.first
+    self.h_show
+    render 'show'
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    self.h_show
+  end
+  
+  def h_show
     @languages = @user.languages
     @frameworks = @user.frameworks
     @grouped_skills = @user.skills.group_by(&:skill_topic_id)

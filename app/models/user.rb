@@ -31,4 +31,20 @@ class User < ActiveRecord::Base
     [first_name,middle_name,last_name].join(" ").titleize
   end
   
+  def beck?
+    self.email == "senthilkumar.hce@gmail.com"
+  end
+  
+  def fname
+    first_name.titleize
+  end
+  
+  def mname
+    middle_name.titleize
+  end
+  
+  def lname
+    last_name.titleize
+  end
+  
 end

@@ -3,6 +3,10 @@ module ApplicationHelper
     i.strftime("%b-%d")
   end
   
+  def titled(i)
+    i.titleize    
+  end
+  
   def bip_name_link(i,name = nil ,link = nil)
     @tour = {ruby_on_rails: "r-o-r", pl_sql: "p-s", :'beck03076@so' => "s-o"}
     name = name || :name
