@@ -21,12 +21,12 @@
         %h4 
           Hello!
           %strong
-            = current_user.first_name
+            = current_user.provider_name
           %small.text-right 
             %small
             = current_user.email
           %h6.low
-            Start creating your resume just by editing mine. Begin by clicking on my name!        
+            Start creating your resume just by editing mine. To begin edit, just click!
           = link_to "Sign out", signout_path, id: "sign_out",class: "themer-b text-right" 
           
       - else
