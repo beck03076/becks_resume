@@ -294,12 +294,12 @@
     border: 1px solid #dddddd;
     background: #f6f6f6 url(images/ui-bg_highlight-soft_100_f6f6f6_1x100.png) 50% 50% repeat-x;
     font-weight: bold;
-    color: #0073ea;
+    color: #35aa84;
 }
 .ui-state-default a,
 .ui-state-default a:link,
 .ui-state-default a:visited {
-    color: #0073ea;
+    color: #35aa84;
     text-decoration: none;
 }
 .ui-state-hover,
@@ -309,7 +309,7 @@
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus {
     border: 1px solid #0073ea;
-    background: #0073ea url(images/ui-bg_highlight-soft_25_0073ea_1x100.png) 50% 50% repeat-x;
+    background: #35aa84 url(images/ui-bg_highlight-soft_25_0073ea_1x100.png) 50% 50% repeat-x;
     font-weight: bold;
     color: #ffffff;
 }
@@ -330,12 +330,12 @@
     border: 1px solid #dddddd;
     background: #ffffff url(images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x;
     font-weight: bold;
-    color: #ff0084;
+    color: #204a87;
 }
 .ui-state-active a,
 .ui-state-active a:link,
 .ui-state-active a:visited {
-    color: #ff0084;
+    color: #204a87;
     text-decoration: none;
 }
 
