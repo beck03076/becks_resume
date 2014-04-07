@@ -192,7 +192,7 @@
           - t = figure_out(l)
           = t.titleize
           %small
-            = bip_name_link @user,(l + '_text').to_sym,(l + '_link').to_sym
+            = bip_name_link @user,(l + '_text').to_sym,(l + '_link').to_sym,true
             - if current_user
               %small.text-center.pilled-l
                 = bip_activators @user,nil,(l + '_text').to_sym,(l + '_link').to_sym

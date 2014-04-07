@@ -7,7 +7,7 @@ module ApplicationHelper
     i.titleize    
   end
   
-  def bip_name_link(i,name = nil ,link = nil)
+  def bip_name_link(i,name = nil ,link = nil,unhover = false)
     @tour = {ruby_on_rails: "r-o-r", pl_sql: "p-s", :'beck03076@so' => "s-o"}
     name = name || :name
     link = link || :link
@@ -19,7 +19,7 @@ module ApplicationHelper
                                                                i.send(link), 
                                                                {target: "_blank",
                                                                 data: {id: i.id},
-                                                                class: "bip-link-skill" } },
+                                                                class: (unhover ? "bip-unhover" : "bip-link-skill") } },
                           classes: tour_cl(i,name)
     html += best_in_place i,
                           link,
