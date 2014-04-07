@@ -2,9 +2,10 @@
   .container
     .col-md-9
       %h1 
-        = @user.first_name.titleize
-        = @user.middle_name.titleize
-        = @user.last_name.titleize
+        %strong
+          = @user.first_name.titleize
+          = @user.middle_name.titleize
+          = @user.last_name.titleize
       %p
         = @user.summary
     .col-md-3
