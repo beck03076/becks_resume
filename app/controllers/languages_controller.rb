@@ -10,12 +10,7 @@ class LanguagesController < ApplicationController
 
   # GET /languages/1
   # GET /languages/1.json
-  def show
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @language }
-    end
-  end
+
 
   # GET /languages/new
   def new

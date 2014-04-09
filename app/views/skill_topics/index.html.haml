@@ -1,0 +1,17 @@
+%h1 Listing skill_topics
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @skill_topics.each do |skill_topic|
+    %tr
+      %td= link_to 'Show', skill_topic
+      %td= link_to 'Edit', edit_skill_topic_path(skill_topic)
+      %td= link_to 'Destroy', skill_topic, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Skill topic', new_skill_topic_path

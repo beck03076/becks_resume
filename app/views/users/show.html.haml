@@ -75,7 +75,7 @@
       - grp.each do |skill_topic_id|
         .dummy{class: "col-xs-#{sp}"}
           %span.tag.medium
-            = SkillTopic.find(skill_topic_id).name
+            = best_in_place_if(current_user,SkillTopic.find(skill_topic_id),:name)
             %small
               - @grouped_skills[skill_topic_id].each do |skill|
                 = bip_name_link skill

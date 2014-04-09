@@ -33,13 +33,26 @@ group :doc do
 end
 
 gem "haml-rails"
-gem "rinku"
 gem "less"
 gem 'therubyracer'
 gem 'best_in_place',git: "https://github.com/aaronchi/best_in_place.git"
 gem 'see_more'
 gem "omniauth-google-oauth2"
 gem 'deep_cloneable'
+
+# testing suite
+
+gem "rspec-rails", :group => [:test, :development]
+gem 'database_cleaner', :group => [:test, :development]
+gem 'selenium-webdriver','~> 2.35.1', :group => [:test, :development]
+group :test do
+  gem "factory_girl_rails"
+  gem 'capybara','~> 2.1.0'
+  gem "guard-rspec"
+  gem 'email_spec'
+  gem 'rspec-console'
+  gem 'pry', '0.9.12.4'
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
