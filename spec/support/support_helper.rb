@@ -37,6 +37,15 @@ module SupportHelper
       page.should have_content('Hello!')
   end
   
+  def update_and_check(field,value)
+    span = "span[id^='best_in_place_#{field}_']"
+    page.all(:css, span).each do |el|
+      el.click
+      fill_blur(value)
+      el.text.should == value
+    end
+  end
+  
   def update_and_check_user(field,value)
     span = "span#best_in_place_user_1_" + field
     page.first(span).click  
@@ -52,6 +61,8 @@ module SupportHelper
       el.text.should == value
     end
   end
+  
+
   
   def fill_blur(val)
     find(:css, "form[class$='form_in_place'] input").set(val)

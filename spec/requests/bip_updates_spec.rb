@@ -24,4 +24,9 @@ describe "LoginUpdateWithBestInPlace" do
         update_and_check_activators(i,"Mozart")
       end
     end
+    
+    it "update regular links", js: true do     
+        update_and_check(skill_topic,"Mozart")
+      end
+    end
 end
