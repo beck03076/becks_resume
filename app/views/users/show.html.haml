@@ -17,24 +17,25 @@
           Take a Tour
         .comment
           some really important things about me
-      - if current_user
-        %h4 
-          Hello!
-          %strong
-            = current_user.provider_name.split(" ")[0]
-          %small.text-right 
-            %small
-            = current_user.email
-          %h6.low
-            Start creating your resume just by editing mine. To begin edit, just click!
-          = link_to "Sign out", signout_path, id: "sign_out",class: "themer-b text-right" 
-      - else
-        = link_to "/auth/google_oauth2", id: "sign_in" ,class: "themer-b text-right"  do
-          %span{class: "glyphicon glyphicon-file mar0"}
-          Create Yours for Free
-        .comment
-          should sign in with google
-        %span{class: "fixed play glyphicon glyphicon-off pointer",id: "stopper", style: "display:none;"}
+        
+        - if current_user
+          %h4 
+            Hello!
+            %strong
+              = current_user.provider_name.split(" ")[0]
+            %small.text-right 
+              %small
+              = current_user.email
+            %h6.low
+              Start creating your resume just by editing mine. To begin edit, just click!
+            = link_to "Sign out", signout_path, id: "sign_out",class: "themer-b text-right" 
+        - else
+          = link_to "#", id: "sign_in" ,class: "themer-b text-right disabled"  do
+            %span{class: "glyphicon glyphicon-file mar0 disabled"}
+            Create Yours for Free
+          .comment
+            Not live yet!
+      %span{class: "fixed play glyphicon glyphicon-off pointer",id: "stopper", style: "display:none;"}
 <br/>
 <br/>
 <br/>
