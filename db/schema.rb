@@ -13,121 +13,121 @@
 
 ActiveRecord::Schema.define(version: 20140403205239) do
 
-  create_table "experiences", force: true do |t|
+  create_table "experiences", force: :cascade do |t|
     t.date     "from"
     t.date     "to"
-    t.string   "role"
-    t.string   "company"
-    t.string   "company_link"
-    t.text     "desc"
+    t.string   "role",         limit: 255
+    t.string   "company",      limit: 255
+    t.string   "company_link", limit: 255
+    t.text     "desc",         limit: 65535
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id"
-    t.text     "duty"
-    t.integer  "created_by"
+    t.integer  "user_id",      limit: 4
+    t.text     "duty",         limit: 65535
+    t.integer  "created_by",   limit: 4
   end
 
-  create_table "frameworks", force: true do |t|
-    t.string   "name"
-    t.text     "desc"
-    t.integer  "created_by"
+  create_table "frameworks", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.text     "desc",       limit: 65535
+    t.integer  "created_by", limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "link"
-    t.integer  "user_id"
+    t.text     "link",       limit: 65535
+    t.integer  "user_id",    limit: 4
   end
 
-  create_table "frameworks_users", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "framework_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "highlights", force: true do |t|
-    t.string   "name"
-    t.text     "link"
-    t.text     "desc"
-    t.integer  "created_by"
-    t.integer  "user_id"
+  create_table "frameworks_users", force: :cascade do |t|
+    t.integer  "user_id",      limit: 4
+    t.integer  "framework_id", limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "languages", force: true do |t|
-    t.string   "name"
-    t.text     "desc"
-    t.integer  "created_by"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.text     "link"
-    t.integer  "user_id"
-  end
-
-  create_table "languages_users", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "language_id"
+  create_table "highlights", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.text     "link",       limit: 65535
+    t.text     "desc",       limit: 65535
+    t.integer  "created_by", limit: 4
+    t.integer  "user_id",    limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "skill_topics", force: true do |t|
-    t.string   "name"
-    t.text     "desc"
-    t.integer  "created_by"
+  create_table "languages", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.text     "desc",       limit: 65535
+    t.integer  "created_by", limit: 4
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "link",       limit: 65535
+    t.integer  "user_id",    limit: 4
+  end
+
+  create_table "languages_users", force: :cascade do |t|
+    t.integer  "user_id",     limit: 4
+    t.integer  "language_id", limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "skill_topics_users", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "skill_topic_id"
+  create_table "skill_topics", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.text     "desc",       limit: 65535
+    t.integer  "created_by", limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "skills", force: true do |t|
-    t.string   "name"
-    t.text     "desc"
-    t.integer  "created_by"
-    t.integer  "updated_by"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "skill_topic_id"
-    t.text     "link"
-    t.integer  "user_id"
-  end
-
-  create_table "skills_users", force: true do |t|
-    t.integer  "skill_id"
-    t.integer  "user_id"
+  create_table "skill_topics_users", force: :cascade do |t|
+    t.integer  "user_id",        limit: 4
+    t.integer  "skill_topic_id", limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
-    t.string   "first_name"
-    t.string   "middle_name"
-    t.string   "last_name"
-    t.text     "summary"
-    t.string   "email"
-    t.string   "mobile"
-    t.text     "address"
-    t.string   "github_text"
-    t.text     "github_link"
-    t.string   "twitter_text"
-    t.text     "twitter_link"
-    t.string   "fb_link"
-    t.text     "fb_text"
-    t.string   "so_text"
-    t.text     "so_link"
+  create_table "skills", force: :cascade do |t|
+    t.string   "name",           limit: 255
+    t.text     "desc",           limit: 65535
+    t.integer  "created_by",     limit: 4
+    t.integer  "updated_by",     limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "oauth_token"
+    t.integer  "skill_topic_id", limit: 4
+    t.text     "link",           limit: 65535
+    t.integer  "user_id",        limit: 4
+  end
+
+  create_table "skills_users", force: :cascade do |t|
+    t.integer  "skill_id",   limit: 4
+    t.integer  "user_id",    limit: 4
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "first_name",       limit: 255
+    t.string   "middle_name",      limit: 255
+    t.string   "last_name",        limit: 255
+    t.text     "summary",          limit: 65535
+    t.string   "email",            limit: 255
+    t.string   "mobile",           limit: 255
+    t.text     "address",          limit: 65535
+    t.string   "github_text",      limit: 255
+    t.text     "github_link",      limit: 65535
+    t.string   "twitter_text",     limit: 255
+    t.text     "twitter_link",     limit: 65535
+    t.string   "fb_link",          limit: 255
+    t.text     "fb_text",          limit: 65535
+    t.string   "so_text",          limit: 255
+    t.text     "so_link",          limit: 65535
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "provider",         limit: 255
+    t.string   "uid",              limit: 255
+    t.string   "oauth_token",      limit: 255
     t.datetime "oauth_expires_at"
-    t.string   "provider_name"
+    t.string   "provider_name",    limit: 255
   end
 
 end

@@ -14,7 +14,7 @@ development:
   database: becks_resume_development
   pool: 5
   username: root
-  password: Sector@123
+  password: password
   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and

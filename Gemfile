@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.4'
+gem 'rails'
 
 # Use mysql as the database for Active Record
 gem 'mysql2'
@@ -16,16 +16,12 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 #gem 'turbolinks'
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -39,20 +35,21 @@ gem 'best_in_place',git: "https://github.com/aaronchi/best_in_place.git"
 gem 'see_more'
 gem "omniauth-google-oauth2"
 gem 'deep_cloneable'
+gem 'pry', :group => :development
 
 # testing suite
 
-gem "rspec-rails", :group => [:test, :development]
-gem 'database_cleaner', :group => [:test, :development]
-gem 'selenium-webdriver','~> 2.35.1', :group => [:test, :development]
-group :test do
-  gem "factory_girl_rails"
-  gem 'capybara','~> 2.1.0'
-  gem "guard-rspec"
-  gem 'email_spec'
-  gem 'rspec-console'
-  gem 'pry', '0.9.12.4'
-end
+# gem "rspec-rails", :group => [:test, :development]
+# gem 'database_cleaner', :group => [:test, :development]
+# gem 'selenium-webdriver','~> 2.35.1', :group => [:test, :development]
+# group :test do
+#   gem "factory_girl_rails"
+#   gem 'capybara','~> 2.1.0'
+#   gem "guard-rspec"
+#   gem 'email_spec'
+#   gem 'rspec-console'
+#   gem 'pry', '0.9.12.4'
+# end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
