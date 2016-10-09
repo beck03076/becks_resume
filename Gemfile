@@ -36,7 +36,7 @@ gem 'see_more'
 gem "omniauth-google-oauth2"
 gem 'deep_cloneable'
 gem 'pry', :group => :development
-gem 'mina'
+gem 'mina', '~> 0.3.4'
 
 # testing suite
 
