@@ -32,7 +32,6 @@ $(function() {
 
   /* Activating Best In Place */
   $(".best_in_place").best_in_place();
-  
   /* show the best in place editable inputs on clicks */
   $('a[class^="link-language"],a[class^="link-framework"],a[class^="link-skill"],a[class^="github_link-user"]').click(function(){
     var cl = $(this).attr('class');
