@@ -14,6 +14,7 @@ set :repository, 'git@github.com:beck03076/becks_resume.git'
 set :branch, 'master'
 set :forward_agent, true
 set :ssh_options, '-A'
+set :stage, 'production'
 # set :stage, 'production'
 # For system-wide RVM install.
 # set :rvm_path, '/home/deploy/.rvm/'
