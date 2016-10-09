@@ -40,6 +40,7 @@ gem 'see_more'
 gem "omniauth-google-oauth2"
 gem 'deep_cloneable'
 gem 'mina', '~> 0.3.4'
+gem 'puma'
 
 # testing suite
 

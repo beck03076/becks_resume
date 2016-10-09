@@ -1,8 +1,8 @@
 #! /bin/sh
 
-PUMA_CONFIG_FILE=/home/deployer/apps/becks_resume/current/config/puma.rb
-PUMA_PID_FILE=/home/deployer/apps/becks_resume/shared/tmp/pids/puma.pid
-PUMA_SOCKET=/home/deployer/apps/becks_resume/shared/tmp/becks_resume.sock
+PUMA_CONFIG_FILE=/home/deploy/apps/becks_resume/current/config/puma.rb
+PUMA_PID_FILE=/home/deploy/apps/becks_resume/shared/tmp/pids/puma.pid
+PUMA_SOCKET=/home/deploy/apps/becks_resume/shared/tmp/becks_resume.sock
 
 # check if puma process is running
 puma_is_running() {
