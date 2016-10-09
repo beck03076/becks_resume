@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.3.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
 
@@ -36,7 +36,8 @@ gem 'see_more'
 gem "omniauth-google-oauth2"
 gem 'deep_cloneable'
 gem 'pry', :group => :development
-gem 'mina'
+gem 'mina', '~> 0.3.7'
+gem 'puma'
 
 # testing suite
 
