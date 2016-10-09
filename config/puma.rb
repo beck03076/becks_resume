@@ -9,7 +9,7 @@ app_dir = "/home/deploy/apps/becks_resume"
 shared_dir = "#{app_dir}/shared"
 
 # Default to production
-rails_env = ENV['RAILS_ENV'] || "production"
+rails_env = "production"
 environment rails_env
 
 # Set up socket location
