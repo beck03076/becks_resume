@@ -34,7 +34,7 @@ end
 
 gem "haml-rails"
 gem "less"
-# gem 'therubyracer'
+gem 'therubyracer'
 gem 'best_in_place',git: "https://github.com/aaronchi/best_in_place.git"
 gem 'see_more'
 gem "omniauth-google-oauth2"
