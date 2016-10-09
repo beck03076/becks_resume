@@ -35,7 +35,6 @@ gem 'best_in_place',git: "https://github.com/aaronchi/best_in_place.git"
 gem 'see_more'
 gem "omniauth-google-oauth2"
 gem 'deep_cloneable'
-gem 'pry', :group => :development
 gem 'mina', '~> 0.3.4'
 
 # testing suite
