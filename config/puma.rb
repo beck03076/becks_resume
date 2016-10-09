@@ -5,7 +5,7 @@ workers 1
 # Min and Max threads per worker
 threads 1, 2
 
-app_dir = "/home/deploy/apps/becks_resume/shared"
+app_dir = "/home/deploy/apps/becks_resume"
 shared_dir = "#{app_dir}/shared"
 
 # Default to production
