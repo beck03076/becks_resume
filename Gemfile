@@ -28,9 +28,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :development do
-  gem 'pry'
-end
+# group :development do
+#   gem 'pry'
+# end
 
 gem "haml-rails"
 gem "less"
